@@ -1,20 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>FBI Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FBI Case Files</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <h1>FBI CASE FILES</h1>
-
-    <div id="game">
-        <p id="story">You arrive at a crime scene. A body lies in the kitchen.</p>
-        <button onclick="choice1()">Investigate the body</button>
-        <button onclick="choice2()">Search the house</button>
+  <header class="top">
+    <div class="badge">FBI</div>
+    <div>
+      <h1>CASE FILES</h1>
+      <p class="sub">Interactive Investigation</p>
     </div>
+  </header>
 
-    <script src="game.js"></script>
+  <main class="layout">
+    <section class="card">
+      <h2 id="caseTitle">Case 001: The Kitchen Scene</h2>
+      <p class="meta" id="caseMeta">Location: Pine Hollow • Time: 02:14 AM</p>
 
+      <div class="divider"></div>
+
+      <p id="story" class="story">
+        You arrive at a silent house. Patrol says the door was unlocked. The kitchen light is on.
+        A body lies near the sink.
+      </p>
+
+      <div id="choices" class="choices"></div>
+
+      <div class="actions">
+        <button class="secondary" id="restartBtn">Restart Case</button>
+      </div>
+    </section>
+
+    <aside class="card">
+      <h2>Clues Collected</h2>
+      <ul id="clues" class="clues"></ul>
+      <p class="hint">Tip: Every choice can unlock new evidence.</p>
+    </aside>
+  </main>
+
+  <script src="game.js"></script>
 </body>
 </html>
+
